@@ -190,6 +190,7 @@ const HomePage = ({ setPage }) => (
       <div style={{ position: "relative", zIndex: 2, textAlign: "center", padding: "0 24px", maxWidth: 900 }}>
         <img src={LOGO_URL} alt="Asli Buna" style={{
           height: "clamp(100px, 18vw, 180px)", objectFit: "contain", marginBottom: 28,
+          display: "block", margin: "0 auto 28px",
           animation: "fadeIn 1s ease", filter: "drop-shadow(0 4px 20px rgba(0,0,0,0.4))",
         }} />
         <p style={{ fontFamily: F.body, fontSize: 11, letterSpacing: 3, textTransform: "uppercase", color: C.gold, marginBottom: 16, animation: "fadeIn 1s ease 0.2s both" }}>
