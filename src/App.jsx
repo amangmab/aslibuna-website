@@ -557,7 +557,7 @@ const ContactPage = ({ setPage }) => {
     setSending(true);
     const formData = new FormData(e.target);
     try {
-      const res = await fetch("https://formspree.io/f/xdkogpvr", {
+      const res = await fetch("https://formspree.io/f/xaqpvgvq", {
         method: "POST",
         body: formData,
         headers: { Accept: "application/json" },
