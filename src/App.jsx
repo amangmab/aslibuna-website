@@ -142,8 +142,8 @@ const Footer = ({ setPage }) => (
   <footer style={{ background: C.darkGreen, borderTop: "1px solid rgba(197,165,90,0.12)" }}>
     <div style={{ maxWidth: 1200, margin: "0 auto", padding: "64px 32px 40px" }}>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 48, marginBottom: 48 }}>
-        <div>
-          <img src={LOGO_URL} alt="Asli Buna" style={{ height: 72, objectFit: "contain", marginBottom: 16}} />
+        <div style={{ textAlign: "center" }}>
+          <img src={LOGO_URL} alt="Asli Buna" style={{ height: 72, objectFit: "contain", marginBottom: 16, display: "block", margin: "0 auto 16px" }} />
           <p style={{ fontFamily: F.accent, fontSize: 16, color: "rgba(255,255,255,0.4)", lineHeight: 1.7, fontStyle: "italic" }}>
             Specialty green coffee<br />from the birthplace of Arabica.
           </p>
@@ -365,7 +365,7 @@ const HomePage = ({ setPage }) => (
       <div style={{ position: "absolute", inset: 0, opacity: 0.03, backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 40px, ${C.gold} 40px, ${C.gold} 41px)` }} />
       <div style={{ maxWidth: 700, margin: "0 auto", textAlign: "center", position: "relative", zIndex: 2 }}>
         <Reveal>
-          <img src={LOGO_URL} alt="Asli Buna" style={{ height: 80, objectFit: "contain", marginBottom: 24, opacity: 0.5, filter: "brightness(1.3)"}} />
+          <img src={LOGO_URL} alt="Asli Buna" style={{ height: 80, objectFit: "contain", marginBottom: 24, opacity: 0.5, filter: "brightness(1.3)", display: "block", margin: "0 auto 24px" }} />
           <h2 style={{ fontFamily: F.display, fontSize: "clamp(24px, 3.5vw, 40px)", fontWeight: 400, color: "#fff", fontStyle: "italic", marginBottom: 16 }}>Partner With Us</h2>
           <p style={{ fontFamily: F.accent, fontSize: 18, color: "rgba(255,255,255,0.5)", lineHeight: 1.7, marginBottom: 36, fontStyle: "italic" }}>
             Whether you are a micro-roaster seeking a single trial bag or a large importer building a seasonal program, we would love to hear from you.
