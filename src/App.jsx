@@ -553,8 +553,19 @@ const ContactPage = ({ setPage }) => {
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
 
+  const [formError, setFormError] = useState("");
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setFormError("");
+
+    // Rate limit: 60-second cooldown between submissions
+    const lastSubmit = localStorage.getItem("aslibuna_last_submit");
+    if (lastSubmit && Date.now() - Number(lastSubmit) < 60000) {
+      setFormError("Please wait a moment before submitting again.");
+      return;
+    }
+
     setSending(true);
     const formData = new FormData(e.target);
     try {
@@ -563,7 +574,12 @@ const ContactPage = ({ setPage }) => {
         body: formData,
         headers: { Accept: "application/json" },
       });
-      if (res.ok) setSubmitted(true);
+      if (res.ok) {
+        localStorage.setItem("aslibuna_last_submit", String(Date.now()));
+        setSubmitted(true);
+      } else {
+        setFormError("Submission failed. Please email us directly at hello@aslibuna.com");
+      }
     } catch {
       alert("Something went wrong. Please email us directly at hello@aslibuna.com");
     }
@@ -633,7 +649,9 @@ const ContactPage = ({ setPage }) => {
 
           <Reveal delay={0.15}>
             <form onSubmit={handleSubmit} style={{ background: "#fff", border: `1px solid ${C.border}`, padding: 36 }}>
+              <input type="text" name="_gotcha" style={{ display: "none" }} tabIndex="-1" autoComplete="off" />
               <h3 style={{ fontFamily: F.display, fontSize: 20, fontWeight: 400, color: C.text, fontStyle: "italic", marginBottom: 24 }}>Send an Inquiry</h3>
+              {formError && <p style={{ fontFamily: F.body, fontSize: 14, color: "#c0392b", marginBottom: 16 }}>{formError}</p>}
 
               <div style={{ marginBottom: 16 }}>
                 <label style={{ fontFamily: F.body, fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", color: C.textLight, display: "block", marginBottom: 6 }}>Name *</label>

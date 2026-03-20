@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aslibuna.com/sitemap.xml
