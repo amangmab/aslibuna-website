@@ -92,7 +92,7 @@ const Nav = ({ page, setPage }) => {
     }}>
       <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between", height: scrolled ? 68 : 84, padding: "0 32px", transition: "height 0.4s" }}>
         <div onClick={() => { setPage("home"); window.scrollTo(0, 0); }} style={{ cursor: "pointer", display: "flex", alignItems: "center", gap: 14 }}>
-          <img src={LOGO_URL} alt="Asli Buna" style={{ height: scrolled ? 44 : 56, transition: "height 0.4s", objectFit: "contain", mixBlendMode: "lighten" }} />
+          <img src={LOGO_URL} alt="Asli Buna" style={{ height: scrolled ? 44 : 56, transition: "height 0.4s", objectFit: "contain"}} />
         </div>
 
         <div style={{ display: "flex", gap: 36, alignItems: "center" }} className="nav-desktop">
@@ -143,7 +143,7 @@ const Footer = ({ setPage }) => (
     <div style={{ maxWidth: 1200, margin: "0 auto", padding: "64px 32px 40px" }}>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 48, marginBottom: 48 }}>
         <div>
-          <img src={LOGO_URL} alt="Asli Buna" style={{ height: 72, objectFit: "contain", marginBottom: 16, mixBlendMode: "lighten" }} />
+          <img src={LOGO_URL} alt="Asli Buna" style={{ height: 72, objectFit: "contain", marginBottom: 16}} />
           <p style={{ fontFamily: F.accent, fontSize: 16, color: "rgba(255,255,255,0.4)", lineHeight: 1.7, fontStyle: "italic" }}>
             Specialty green coffee<br />from the birthplace of Arabica.
           </p>
@@ -192,7 +192,6 @@ const HomePage = ({ setPage }) => (
           height: "clamp(100px, 18vw, 180px)", objectFit: "contain",
           display: "block", margin: "0 auto 28px",
           animation: "fadeIn 1s ease", filter: "drop-shadow(0 4px 20px rgba(200,150,62,0.3))",
-          mixBlendMode: "lighten",
         }} />
         <p style={{ fontFamily: F.body, fontSize: 11, letterSpacing: 3, textTransform: "uppercase", color: C.gold, marginBottom: 16, animation: "fadeIn 1s ease 0.2s both" }}>
           Ethiopian Heritage Coffee
@@ -366,7 +365,7 @@ const HomePage = ({ setPage }) => (
       <div style={{ position: "absolute", inset: 0, opacity: 0.03, backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 40px, ${C.gold} 40px, ${C.gold} 41px)` }} />
       <div style={{ maxWidth: 700, margin: "0 auto", textAlign: "center", position: "relative", zIndex: 2 }}>
         <Reveal>
-          <img src={LOGO_URL} alt="Asli Buna" style={{ height: 80, objectFit: "contain", marginBottom: 24, opacity: 0.5, filter: "brightness(1.3)", mixBlendMode: "lighten" }} />
+          <img src={LOGO_URL} alt="Asli Buna" style={{ height: 80, objectFit: "contain", marginBottom: 24, opacity: 0.5, filter: "brightness(1.3)"}} />
           <h2 style={{ fontFamily: F.display, fontSize: "clamp(24px, 3.5vw, 40px)", fontWeight: 400, color: "#fff", fontStyle: "italic", marginBottom: 16 }}>Partner With Us</h2>
           <p style={{ fontFamily: F.accent, fontSize: 18, color: "rgba(255,255,255,0.5)", lineHeight: 1.7, marginBottom: 36, fontStyle: "italic" }}>
             Whether you are a micro-roaster seeking a single trial bag or a large importer building a seasonal program, we would love to hear from you.
@@ -582,7 +581,7 @@ const ContactPage = ({ setPage }) => {
       <div>
         <section style={{ background: C.warmWhite, minHeight: "80vh", display: "flex", alignItems: "center", justifyContent: "center", padding: "160px 32px 80px" }}>
           <div style={{ textAlign: "center", maxWidth: 500 }}>
-            <img src={LOGO_URL} alt="Asli Buna" style={{ height: 64, objectFit: "contain", marginBottom: 20, opacity: 0.7, mixBlendMode: "lighten" }} />
+            <img src={LOGO_URL} alt="Asli Buna" style={{ height: 64, objectFit: "contain", marginBottom: 20, opacity: 0.7}} />
             <h2 style={{ fontFamily: F.display, fontSize: 32, fontWeight: 400, color: C.text, fontStyle: "italic", marginBottom: 12 }}>Thank You</h2>
             <p style={{ fontFamily: F.accent, fontSize: 17, color: C.textMuted, fontStyle: "italic", lineHeight: 1.7 }}>
               Your inquiry has been received. We will follow up within one business day.
